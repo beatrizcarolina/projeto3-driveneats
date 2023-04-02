@@ -8,7 +8,7 @@
   }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto";
     font-size: 16px;
 }
 
@@ -26,19 +26,6 @@ body{
     top: 0;
     position: fixed;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.container-principal{
-    padding: 33px 0px 1px 21px;
-    width: 414px;
-    margin: 0 auto;
-}
-
-.principal{
-    width: 100%;
-    margin: 92px auto;
-    border-left: 2px solid #d2d2d2;
-    border-right: 2px solid #d2d2d2;
 }
 
 h1{
@@ -64,5 +51,82 @@ h3{
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
+}
+
+.principal{
+    width: 100%;
+    margin: 92px auto;
+    background-color: #e5e5e5;
+}
+
+.container-principal{
+    width: 414px;
+    padding: 33px 0px 1px 21px;
+    margin: 0 auto;
+}
+
+p{
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+}
+
+.container-opções{
+    margin: 17px 0px 20px 0px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 16px;
+}
+
+.opção{
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 18px 14px 13px 14px;
+    cursor: pointer;
+    
+    /*flex: 0 0 172px;*/
+}
+
+.opção>img{
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.prato{
+    width: 100%;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.descrição{
+    height: 39px;
+    width: 147px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #A6A6A6;
+}
+
+.preço{
+    width: 66px;
+    height: 19px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000000;
 }
 
