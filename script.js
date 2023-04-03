@@ -79,12 +79,6 @@ function confirmarPedido(){
     confirmaçãoFinal.classList.remove('hidden')
 }
 
-/*function cancelarPedido(){
-    const confirmaçãoFinal = document.querySelector('.confirmaPedido');
-    console.log(confirmaçãoFinal);
-    confirmaçãoFinal.classList.add('hidden')
-}*/
-
 function finalizarPedido() {
     const nome = prompt('Nome');
     const endereço = prompt('Endereço');
