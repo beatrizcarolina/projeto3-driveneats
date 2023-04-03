@@ -39,7 +39,6 @@ function selecionarBebida(seleção){
     verificarPedido();
 }
 
-
 function selecionarSobremesa(seleção){
     const preSeleção = document.querySelector('.opçãosobremesa.selecionado');
     if (preSeleção !== null) {
@@ -74,8 +73,6 @@ function confirmarPedido(){
 }
 
 function finalizarPedido() {
-    const nome = prompt('Nome');
-    const endereço = prompt('Endereço');
     let valorTotal = parseFloat(preçoPrato) + parseFloat(preçoBebida) + parseFloat(preçoSobremesa);
     valorTotal = valorTotal.toFixed(2).replace('.',',');
     const mensagem = 
@@ -84,7 +81,5 @@ function finalizarPedido() {
         `- Bebida: ${nomeBebida}%0A` +
         `- Sobremesa: ${nomeSobremesa}%0A` +
         `Total: R$ ${valorTotal}%0A%0A` +
-        `Nome: ${nome}%0A` +
-        `Endereço: ${endereço}`;
     window.open(`https://wa.me/+5511900000000?text=${mensagem}`);
 }
