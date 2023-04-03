@@ -15,44 +15,43 @@ function verificarPedido(){
     }
 }
 
-function selecionarPrato(selecionado){
-    const preSeleção = document.querySelector('.pratoSelecionado');
+function selecionarPrato(seleção){
+    const preSeleção = document.querySelector('.opçãoprato.selecionado');
     if (preSeleção !== null) {
         preSeleção.classList.remove('selecionado');
     }
-    selecionado.classList.add('selecionado');
-    let preçoParcial = selecionado.querySelector('preço').innerHTML;
+    seleção.classList.add('selecionado');
+    let preçoParcial = seleção.querySelector('preço').innerHTML;
         preçoParcial = preçoParcial.replace('R$','').replace(',','.');
         preçoPrato = parseFloat(preçoParcial).toFixed(2);
-    nomePrato = selecionado.querySelector('prato').innerHTML;
+    nomePrato = seleção.querySelector('prato').innerHTML;
+    verificarPedido();
+}
+
+function selecionarBebida(seleção){
+    const preSeleção = document.querySelector('.opçãobebida.selecionado');
+    if (preSeleção !== null) {
+        preSeleção.classList.remove('selecionado');
+    }
+    seleção.classList.add('selecionado');
+    let preçoParcial = seleção.querySelector('preço').innerHTML;
+        preçoParcial = preçoParcial.replace('R$','').replace(',','.');
+        preçoPrato = parseFloat(preçoParcial).toFixed(2);
+    nomePrato = seleção.querySelector('prato').innerHTML;
     verificarPedido();
 }
 
 
-function selecionarBebida(selecionado){
-    const preSeleção = document.querySelector('.bebidaSelecionada');  
-    if (preSeleção !== null){
+function selecionarSobremesa(seleção){
+    const preSeleção = document.querySelector('.opçãosobremesa.selecionado');
+    if (preSeleção !== null) {
         preSeleção.classList.remove('selecionado');
     }
-    selecionado.classList.add('selecionado');
-    let preçoParcial = selecionado.querySelector('preço').innerHTML;
-        preçoParcial = preçoParcial.replace('R$','').replace(',','.');
-        preçoBebida = parseFloat(preçoParcial).toFixed(2);
-    nomeBebida = selecionado.querySelector('prato').innerHTML;
-    verificarPedido();
-}
-
-
-function selecionarSobremesa(selecionado){    
-    const preSeleção = document.querySelector('.sobremesaSelecionada');
-    if (preSeleção !== null){
-        preSeleção.classList.remove('selecionado');
-    }
-    selecionado.classList.add('selecionado');
-    let preçoParcial = selecionado.querySelector('preço').innerHTML;
+    seleção.classList.add('selecionado');
+    let preçoParcial = seleção.querySelector('preço').innerHTML;
         preçoParcial = preçoParcial.replace('R$','').replace(',','.');
         preçoPrato = parseFloat(preçoParcial).toFixed(2);
-    nomeSobremesa = selecionado.querySelector('prato').innerHTML;
+    nomePrato = seleção.querySelector('prato').innerHTML;
     verificarPedido();
 }
 
