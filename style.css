@@ -102,7 +102,9 @@ p {
     width: 144px;
 }
 
-.prato {
+.prato,
+.bebida,
+.sobremesa {
     width: 100%;
     font-family: "Roboto";
     font-size: 16px;

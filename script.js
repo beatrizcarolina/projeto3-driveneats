@@ -1,6 +1,7 @@
 let preçoPrato = 0;
 let preçoBebida = 0;
 let preçoSobremesa = 0;
+let total = 0;
 
 let nomePrato = '';
 let nomeBebida = '';
@@ -49,7 +50,7 @@ function selecionarSobremesa(seleção){
     verificarPedido();
 }
 
-function confirmarPedido(){
+/*function confirmarPedido(){
     const verificaPrato = document.querySelector('.confirmaPrato');
     const verificaBebida = document.querySelector('.confirmaBebida');
     const verificaSobremesa = document.querySelector('.confirmaSobremesa');
@@ -82,4 +83,39 @@ function finalizarPedido() {
         `- Sobremesa: ${nomeSobremesa}%0A` +
         `Total: R$ ${valorTotal}%0A%0A` +
     window.open(`https://wa.me/+5511900000000?text=${mensagem}`);
-}
+}*/
+
+function finalizarPedido() {
+    nomePrato = document.querySelector(".opçãoprato .selecionado .prato").innerText;
+    preçoPrato = document.querySelector(".opçãoprato .selecionado .preço").innerText;
+    preçoPrato = preçoPrato.substring(2);
+    preçoPrato = preçoPrato.replace(",", ".");
+    console.log(preçoPrato);
+  
+    nomeBebida = document.querySelector(".opçãobebida.selecionado.bebida").innerText;
+    preçoBebida = document.querySelector(".opçãobebida.selecionado.preço").innerText;
+    preçoBebida = preçoBebida.substring(2);
+    preçoBebida = preçoBebida.replace(",", ".");
+    console.log(preçoBebida);
+  
+    nomeSobremesa = document.querySelector(".opçãosobremesa.selecionado.sobremesa").innerText;
+    preçoSobremesa = document.querySelector(".opçãosobremesa.selecionado.preço").innerText;
+    preçoSobremesa = preçoSobremesa.substring(2);
+    preçoSobremesa = preçoSobremesa.replace(",", ".");
+    console.log(preçoSobremesa);
+  
+    total = parseFloat(preçoPrato) + parseFloat(preçoBebida) + parseFloat(preçoSobremesa);
+    total = total.toFixed(2);
+    total = `${total}`;
+    total = total.replace(".", ",");
+    total = "R$" + total;
+    console.log(total);
+  
+    let wpp =
+      "https://wa.me/32985039406?text=" +
+      encodeURIComponent(
+        `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa : ${nomeSobremesa}\nTotal: ${total}\n`
+      );
+    console.log(wpp);
+    window.open(wpp);
+  }
