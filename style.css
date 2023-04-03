@@ -145,7 +145,7 @@ p {
     position: fixed;
 }
 
-.confirmar {
+.fecharPedido {
     height: 61px;
     width: 364px;
     background-color: #cbcbcb;
@@ -161,3 +161,42 @@ p {
     color: #FFFFFF;  
 }
 
+.selecionado {
+    padding: 13px 9px 8px 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border: 5px solid #32B72F;
+    border-radius: 9px;
+    background: url("./imagens/Vector.jpg") #ffffff no-repeat;
+    background-size: 18px;
+    background-position: 95% 95%;
+}
+
+.botãoHabilitado {
+    font-weight: 700;
+    background-color: #32B72F;
+    cursor: pointer;
+}
+
+.confirmarPedido {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmaçãoFinal {
+    padding: 20px 25px 0px 25px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    background-color: #50d074;
+    color: #ffffff;
+
+}
+
+.hidden{
+    display: none;
+}
